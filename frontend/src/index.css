@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-impact: "Impact", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-braviz-blue: #263985;
+  --color-braviz-blue-dark: #1a275c;
+  --color-braviz-orange: #f97316;
+}
+
+@layer base {
+  :root {
+    --braviz-blue: #263985;
+  }
+
+  body {
+    font-family: var(--font-montserrat);
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-impact {
+    font-family: var(--font-impact);
+    font-weight: normal;
+  }
+}
