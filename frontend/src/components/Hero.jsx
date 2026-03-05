@@ -13,9 +13,9 @@ const Hero = () => {
                 className="max-w-3xl border-l-[12px] border-[#3A968F] pl-8 mb-8"
             >
                 <h1 className="font-impact text-5xl md:text-6xl lg:text-7xl text-[#263985] uppercase tracking-wider leading-[0.95]">
-                    Excellence<br />
-                    Across<br />
-                    Solutions
+                    Top Industrial<br />
+                    Solutions in<br />
+                    Saudi Arabia
                 </h1>
             </motion.div>
 
