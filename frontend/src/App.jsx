@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import ConnectPage from './pages/ConnectPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/connectwithbraviz" element={<ConnectPage />} />
           </Routes>
         </div>
         <Footer />
