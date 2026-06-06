@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import ContactPage from './pages/ContactPage';
 import ConnectPage from './pages/ConnectPage';
+import SeoLandingPage from './pages/SeoLandingPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -15,8 +17,10 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/connectwithbraviz" element={<ConnectPage />} />
+            <Route path="/:slug" element={<SeoLandingPage />} />
           </Routes>
         </div>
         <Footer />

@@ -3,9 +3,10 @@ import Hero from '../components/Hero';
 import TrustFeatures from '../components/TrustFeatures';
 import Industries from '../components/Industries';
 import OurCommitment from '../components/OurCommitment';
+import AboutSection from '../components/AboutSection';
 import { motion } from 'framer-motion';
 
-const LandingPage = () => {
+const LandingPage = ({ heroTitle }) => {
     return (
         <main className="relative min-h-screen bg-slate-50 overflow-hidden w-full flex flex-col pt-20">
             {/* Background Video Integration (Light Mode) */}
@@ -31,7 +32,8 @@ const LandingPage = () => {
 
             {/* Content Container */}
             <div className="relative z-20 flex-grow flex flex-col items-start w-full gap-24">
-                <Hero />
+                <Hero customTitle={heroTitle} />
+                <AboutSection />
                 <TrustFeatures />
                 <Industries />
                 <OurCommitment />

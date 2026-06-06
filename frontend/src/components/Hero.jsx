@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
-const Hero = () => {
+const Hero = ({ customTitle }) => {
     const navigate = useNavigate();
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 pb-8 flex-shrink-0">
@@ -13,9 +13,15 @@ const Hero = () => {
                 className="max-w-3xl border-l-[12px] border-[#3A968F] pl-8 mb-8"
             >
                 <h1 className="font-impact text-5xl md:text-6xl lg:text-7xl text-[#263985] uppercase tracking-wider leading-[0.95]">
-                    Top Industrial<br />
-                    Solutions in<br />
-                    Saudi Arabia
+                    {customTitle ? (
+                        <span dangerouslySetInnerHTML={{ __html: customTitle }} />
+                    ) : (
+                        <>
+                            Braviz Industrial<br />
+                            Solutions in<br />
+                            Saudi Arabia
+                        </>
+                    )}
                 </h1>
             </motion.div>
 

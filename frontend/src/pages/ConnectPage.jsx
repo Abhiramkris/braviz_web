@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, Copy, Check, ArrowLeft, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, Copy, Check, ExternalLink } from 'lucide-react';
 import logo from '../assets/logo_only.png';
 
 const ConnectPage = () => {
@@ -22,22 +21,6 @@ const ConnectPage = () => {
             <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[60%] rounded-full bg-[#3A968F]/12 blur-[120px] z-0 pointer-events-none" />
 
             <div className="max-w-3xl w-full px-4 sm:px-6 relative z-10 flex flex-col items-center">
-                {/* Back to Home Link */}
-                <motion.div 
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="self-start mb-6"
-                >
-                    <Link 
-                        to="/" 
-                        className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-braviz-blue font-inter font-semibold transition-colors group"
-                    >
-                        <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                        Back to Home
-                    </Link>
-                </motion.div>
-
                 {/* Main Glassmorphic Card */}
                 <motion.div
                     initial={{ opacity: 0, y: 25 }}
@@ -45,43 +28,15 @@ const ConnectPage = () => {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="w-full bg-white/70 backdrop-blur-xl rounded-3xl border border-white/60 shadow-2xl shadow-slate-200/80 p-6 sm:p-10 md:p-12 relative"
                 >
-                    {/* Active Status Badge */}
-                    <div className="absolute top-6 right-6 hidden sm:flex items-center gap-2 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full shadow-sm">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <span className="text-[10px] font-bold font-inter text-emerald-700 tracking-wider uppercase">Direct Lines Active</span>
-                    </div>
-
-                    {/* Header */}
-                    <div className="flex flex-col items-center text-center mb-10">
+                    {/* Header: Logo Only */}
+                    <div className="flex flex-col items-center text-center mb-8">
                         <motion.div
                             initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="mb-5"
                         >
-                            <img src={logo} alt="Braviz Logo" className="h-14 w-auto object-contain" />
+                            <img src={logo} alt="Braviz Logo" className="h-16 w-auto object-contain" />
                         </motion.div>
-
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[#263985] text-[10px] font-bold font-inter tracking-widest uppercase shadow-sm">
-                                <ShieldCheck className="w-3.5 h-3.5 text-[#3A968F]" /> Verified Contact
-                            </span>
-                            {/* Mobile status indicator */}
-                            <div className="flex sm:hidden items-center gap-1.5 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full">
-                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                <span className="text-[9px] font-bold font-inter text-emerald-700 uppercase">Active</span>
-                            </div>
-                        </div>
-
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-impact tracking-wide mb-3 bg-gradient-to-r from-braviz-blue to-[#3A968F] bg-clip-text text-transparent">
-                            CONNECT WITH BRAVIZ
-                        </h1>
-                        <p className="text-slate-600 font-inter text-sm sm:text-base max-w-md leading-relaxed">
-                            Connect with us instantly. Click below to start a direct call or send a request to our departments.
-                        </p>
                     </div>
 
                     {/* Phone Section (Primary Action) */}
